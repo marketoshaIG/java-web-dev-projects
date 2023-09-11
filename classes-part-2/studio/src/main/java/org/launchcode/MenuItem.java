@@ -6,42 +6,47 @@ public class MenuItem {
     private String category;
     private boolean isNew;
 
-    public MenuItem(double price, String description, String category, boolean isNew) {
-        this.price = price;
-        this.description = description;
-        this.category = category;
-        this.isNew = false;
-    }
-
-    public double getPrice() {
-        return price;
+    public MenuItem(double p, String d, String c, boolean iN) {
+        this.price = p;
+        this.description = d;
+        this.category = c;
+        this.isNew = iN;
     }
 
     public void setPrice(double price) {
         this.price = price;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getCategory() {
-        return category;
     }
 
     public void setCategory(String category) {
         this.category = category;
     }
 
-    public boolean isNew() {
-        return isNew;
+    public void setNew(boolean aNew) {
+        isNew = aNew;
     }
 
-    public void setNew(boolean isNew) {
-        this.isNew = isNew;
+    public double getPrice(){
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+    public boolean getNew(){
+
+        return isNew;
+    }
+    @Override
+    public String toString() {
+        return "**************\n" + "name: " + getDescription() + "price: " +
+                getPrice() + "category: " + getCategory() + "is new: " + getNew();
     }
 }

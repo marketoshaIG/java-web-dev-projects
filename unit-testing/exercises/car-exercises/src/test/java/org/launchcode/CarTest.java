@@ -21,6 +21,12 @@ class CarTest {
 
     //TODO: constructor sets gasTankLevel properly
     @Test
+    public void testGasTankAfterDriving() {
+        test_car.drive(50);
+        assertEquals(9, test_car.getGasTankLevel(),.001);
+    }
+
+    @Test
     public void testInitialGasTank() {
         assertEquals( 10, test_car.getGasTankLevel(),.001);
     }
