@@ -1,8 +1,17 @@
 package org.launchcode;
 
-public class DVD {
-    // TODO: Implement your custom interface.
+public class DVD extends BaseDisc {
 
-    // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-    //  need to be declared separately.
+    private int spinSpeed;
+
+    public DVD(String name, int storageCapacity, int spinSpeed) {
+        super(name, storageCapacity, "DVD");
+        this.spinSpeed = spinSpeed;
+    }
+
+    @Override
+    public void spinDisc() {
+        System.out.println("A DVD spins at a rate of " + spinSpeed + " rpm.");
+    }
 }
+
